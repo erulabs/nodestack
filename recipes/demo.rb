@@ -18,6 +18,7 @@
 # limitations under the License.
 #
 
+default['nodestack']['bind_low_ports'] = true
 node.set['nodestack']['apps']['my_nodejs_app']['app_dir'] = '/var/app'
 node.set['nodestack']['apps']['my_nodejs_app']['app_options'] = []
 node.set['nodestack']['apps']['my_nodejs_app']['git_repo'] = 'git@github.com:marcoamorales/node-hello-world.git'

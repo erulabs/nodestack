@@ -92,16 +92,17 @@ node['nodestack']['apps'].each do |app| # each app loop
       repository app_config['git_repo']
       revision app_config['git_rev']
       before_migrate do
-        current_release = release_path
-        template "#{current_release}/#{app_config['deployment']['before_symlink']}" do
+        template "#{release_path}/#{app_config['deployment']['before_symlink']}" do
           source app_config['deployment']['before_symlink_template']
           owner app_name
           group app_name
           mode '0744'
           cookbook node['nodestack']['cookbook']
           variables(
+            app_name: app_name,
             app_config: app_config,
-            templates_options: app_config['deployment']['template_options']
+            templates_options: app_config['deployment']['template_options'],
+            release_path: release_path
           )
           only_if { !app_config['deployment']['before_symlink'].nil? }
         end

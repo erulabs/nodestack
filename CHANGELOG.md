@@ -3,6 +3,10 @@ nodestack CHANGELOG
 
 This file is used to list changes made in each version of the nodestack cookbook.
 
+2.4.1
+---
+- Seandon Mooy - Add release_path to before_symlink template file
+
 2.4.0
 ---
 - @lmunro - Added nginx reverse proxy with tests. Fixed logstash log path.

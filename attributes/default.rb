@@ -15,3 +15,4 @@ end
 
 default['nodestack']['code_deployment'] = true
 default['nodestack']['bind_low_ports'] = false
+default['nodestack']['install_node'] = true

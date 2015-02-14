@@ -28,8 +28,13 @@ else
   include_recipe 'apt'
 end
 
-%w(chef-sugar nodejs nodejs::npm git build-essential
-).each do |recipe|
+if node['nodestack']['install_node'] == true
+  %w(nodejs nodejs::npm).each do |recipe|
+    include_recipe recipe
+  end
+end
+
+%w(chef-sugar git build-essential).each do |recipe|
   include_recipe recipe
 end
 

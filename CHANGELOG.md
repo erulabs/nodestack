@@ -6,6 +6,7 @@ This file is used to list changes made in each version of the nodestack cookbook
 2.4.1
 ---
 - Seandon Mooy - Add release_path to before_symlink template file
+- Seandon Mooy - Ability to skip node and NPM install so that we can get modern versions if we want
 
 2.4.0
 ---
